@@ -1,0 +1,57 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.splash-container {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: Arial;
+  color: white;
+  overflow: hidden;
+}
+
+.logo {
+  font-size: 65px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  animation: zoomFade 2s ease-in-out;
+}
+
+.loading {
+  position: absolute;
+  bottom: 80px;
+  font-size: 18px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes zoomFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

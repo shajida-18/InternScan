@@ -1,0 +1,250 @@
+.resume-page {
+  font-family: Arial;
+  margin: 0;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+  font-size: 20px;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* MAIN */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+/* DESCRIPTION */
+
+.description {
+  background: white;
+  width: 60%;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* CARD */
+
+.card {
+  background: white;
+  padding: 30px;
+  width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* BUTTON */
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #2a5298;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #1e3c72;
+}
+
+/* MATCH BAR (old version still supported) */
+
+.match-bar {
+  width: 100%;
+  height: 18px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.match-fill {
+  height: 100%;
+  width: 0%;
+  background: green;
+  transition: 0.5s;
+}
+
+.result {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* ---------------- NEW FEATURES ---------------- */
+
+/* POPUP ALERT */
+
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #2a5298;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* CIRCULAR SCORE METER */
+
+.meter-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.circle-meter {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.circle-progress {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.6s;
+}
+
+.circle-inner {
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.circle-progress:hover {
+  transform: scale(1.05);
+}
+
+/* SKILLS SECTION */
+
+.skills-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.skills {
+  width: 48%;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.skills h4 {
+  margin-bottom: 10px;
+}
+
+/* MATCHED SKILLS */
+
+.matched {
+  background: #e8f9f0;
+}
+
+.matched span {
+  display: inline-block;
+  background: #28a745;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  margin: 4px;
+  font-size: 13px;
+}
+
+/* MISSING SKILLS */
+
+.missing {
+  background: #fff1f1;
+}
+
+.missing span {
+  display: inline-block;
+  background: #dc3545;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  margin: 4px;
+  font-size: 13px;
+}
+
+/* SUGGESTION */
+
+.suggestion {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .description {
+    width: 90%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .skills-section {
+    flex-direction: column;
+  }
+
+  .skills {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
