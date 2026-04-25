@@ -55,11 +55,14 @@ function Signup() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/signup", {
-        name,
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://internscan-2.onrender.com/api/auth/signup",
+        {
+          name,
+          email,
+          password,
+        },
+      );
 
       showPopup(res.data.message, "success");
       setTimeout(() => navigate("/login"), 1500);

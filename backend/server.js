@@ -7,6 +7,11 @@ import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 connectDB();
+app.use(
+  cors({
+    origin: "https://intern-scan-7xfu.vercel.app",
+  }),
+);
 
 const app = express();
 
